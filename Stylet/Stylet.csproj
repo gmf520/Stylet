@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net452;netcoreapp3.0;netcoreapp3.1;net5.0-windows</TargetFrameworks>
+    <TargetFrameworks>net452;net8.0-windows;net9.0-windows</TargetFrameworks>
     <CheckEolTargetFramework>false</CheckEolTargetFramework>
     <LangVersion>10</LangVersion>
     <UseWPF>true</UseWPF>
@@ -10,8 +10,8 @@
     <EnableDefaultItems>false</EnableDefaultItems>
     <DocumentationFile>bin\Stylet.xml</DocumentationFile>
 
-    <VersionPrefix>0.0.0</VersionPrefix>
-    <PackageId>Stylet</PackageId>
+    <VersionPrefix>1.3.7.2</VersionPrefix>
+    <PackageId>OSharp.Stylet</PackageId>
     <PackageTags>WPF;MVVM;ViewModel;Screen Conductor;ViewModel-First;Model-View-ViewModel;UI</PackageTags>
     <Copyright>Copyright © 2014 Antony Male</Copyright>
     <PackageIcon>StyletIcon.png</PackageIcon>
@@ -30,10 +30,14 @@
     <DebugType>portable</DebugType>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' != 'net452'">
-    <PackageReference Include="System.Drawing.Common" Version="4.7.3" />
+  <ItemGroup Condition="'$(TargetFramework)'=='net8.0-windows'">
+    <PackageReference Include="System.Drawing.Common" Version="8.0.*" />
   </ItemGroup>
-  
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net9.0-windows'">
+    <PackageReference Include="System.Drawing.Common" Version="9.0.*" />
+  </ItemGroup>
+
   <ItemGroup>
     <Compile Include="**\*.cs" Exclude="obj\**" />
     <None Remove="**\*.cs" />
