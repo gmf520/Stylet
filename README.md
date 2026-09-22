@@ -7,7 +7,7 @@
 Introduction
 ------------
 
-Stylet is a small but powerful ViewModel-first MVVM framework for WPF (.NET 4.5.2+ and .NET Core 3.0+), which allows you to write maintainable and extensible code in a way which is easy to test.
+Stylet is a small but powerful ViewModel-first MVVM framework for WPF (.NET 6.0+), which allows you to write maintainable and extensible code in a way which is easy to test.
 Stylet's aims are to:
 
  - Solve the blockers, niggles, and annoyances which hamper MVVM development without a framework, using simple but powerful concepts.
@@ -15,15 +15,15 @@ Stylet's aims are to:
  - Be easy to verify/validate. The LOC count is low, and it comes with a very comprehensive test suite. The code is well-written and well-documented.
  - Be flexible while providing sensible defaults. Almost any part of the framework can be overridden if you wish, but you probably won't want to.
 
-It is inspired by [Caliburn.Micro](http://caliburnmicro.com/), and shares many of its concepts, but removes most of the magic (replacing it with more powerful alternatives), and simplifies parts considerably by targeting only MVVM, WPF and .NET 4.5.2.
+It is inspired by [Caliburn.Micro](http://caliburnmicro.com/), and shares many of its concepts, but removes most of the magic (replacing it with more powerful alternatives), and simplifies parts considerably by targeting only MVVM and WPF.
 
 
 Getting Started
 ---------------
 
-### .NET 5.0+ / .NET Core
+### .NET 6.0+
 
-For .NET Core and .NET 5.0+ projects, the quickest way to get started is by using `dotnet new` with Stylet's template.
+For .NET 6.0+ projects, the quickest way to get started is by using `dotnet new` with Stylet's template.
 
 Open a command window where you want to create your new project, and install the Stylet templates using:
 
@@ -31,7 +31,7 @@ Open a command window where you want to create your new project, and install the
 dotnet new -i Stylet.Templates
 ```
 
-Then create a new .NET 5.0 project with:
+Then create a new Stylet project with:
 
 ```
 dotnet new stylet -n MyStyletProject
@@ -39,27 +39,9 @@ dotnet new stylet -n MyStyletProject
 
 (changing `MyStyletProject` as appropriate).
 
-If you want to create a .NET Core 3.1 project, then:
-
-```
-dotnet new stylet -F netcoreapp3.1 -n MyStyletProject
-```
-
 If you want to set up your project manually, install the [Stylet](https://www.nuget.org/packages/Stylet) package, then follow the instructions in the [Quick Start](https://github.com/canton7/Stylet/wiki/Quick-Start).
 
-Stylet requires .NET 5.0+ or .NET Core 3.0+.
-
-
-### .NET Framework (<= .NET 4)
-
-For .NET Framework projects, the quickest way to get started is to create a new "WPF Application" project, then install the NuGet package [Stylet.Start](https://www.nuget.org/packages/Stylet.Start).
-This will install Stylet, and set up a simple skeleton project.
-
-See [Quick Start](https://github.com/canton7/Stylet/wiki/Quick-Start) for more details.
-
-If you want to set up your project manually, install the [Stylet](https://www.nuget.org/packages/Stylet) package, then follow the instructions in the [Quick Start](https://github.com/canton7/Stylet/wiki/Quick-Start).
-
-Stylet requires .NET 4.5.2 (Visual Studio 2012 or higher).
+Stylet requires .NET 6.0 or later.
 
 
 Documentation
